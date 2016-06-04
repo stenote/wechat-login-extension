@@ -21,7 +21,7 @@ composer require deepdevelop/wechat-login-extension=dev-master
 	
 * `php artisan extension:install deepdevelop.extension.wechat_login`
 * `php artisan db:seed --addon=deepdevelop.extension.wechat_login`
-```
+
 
 #### 如果没安装好 `pyrocms`, 先安装 `pyrocms` 再进行上述插件安装
 
