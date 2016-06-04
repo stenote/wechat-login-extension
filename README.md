@@ -12,7 +12,7 @@ php >= 7.0
 ### 使用 composer 进行该依赖安装
 
 ```
-composer require deepdevelop/wechat-login-extension=dev-master
+composer require "deepdevelop/wechat-login-extension:~0.1"
 ```
 
 ### 进行该插件安装
