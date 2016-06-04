@@ -11,5 +11,8 @@
         "socialiteproviders/weixin-web": "^2.0",
         "socialiteproviders/weixin": "^2.1",
         "jenssegers/agent": "^2.3"
-    }
+    },
+    "description": "wechat login extension for pyrocms",
+    "keywords": ["wechat", "extension", "pyrocms"],
+    "license": "MIT"
 }

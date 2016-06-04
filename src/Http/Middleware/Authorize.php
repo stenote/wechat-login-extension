@@ -48,6 +48,8 @@ class Authorize
         //不是请求 weixin/login
 
         if (
+            config('wechat.autologin')
+            &&
             ! $request->session()->has('wechat_requested')
             &&
             strpos($agent->getUserAgent(), 'MicroMessenger') !== false
