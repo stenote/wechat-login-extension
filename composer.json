@@ -5,5 +5,10 @@
         "psr-4": {
             "Deepdevelop\\WechatLoginExtension\\": "src/"
         }
+    },
+    "require": {
+        "socialiteproviders/weixin-web": "^2.0",
+        "socialiteproviders/weixin": "^2.1",
+        "jenssegers/agent": "^2.3"
     }
 }
