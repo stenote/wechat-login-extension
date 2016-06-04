@@ -7,6 +7,7 @@
         }
     },
     "require": {
+        "anomaly/streams-composer-plugin": "~1.1",
         "socialiteproviders/weixin-web": "^2.0",
         "socialiteproviders/weixin": "^2.1",
         "jenssegers/agent": "^2.3"
