@@ -12,8 +12,10 @@ php >= 7.0
 ### 使用 composer 进行该依赖安装
 
 ```
-composer require "deepdevelop/wechat-login-extension:~0.1"
+composer require "deepdevelop/wechat_login-extension:~0.1"
 ```
+
+由于 `pyrocms` 的设计中, 需要使用 `-` 来区分 addon 的类型和名称, 所以，如上包的名字为正确设置 
 
 ### 进行该插件安装
 

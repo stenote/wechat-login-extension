@@ -1,5 +1,5 @@
 {
-    "name": "deepdevelop/wechat-login-extension",
+    "name": "deepdevelop/wechat_login-extension",
     "type": "streams-addon",
     "autoload": {
         "psr-4": {
