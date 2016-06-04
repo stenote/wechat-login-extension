@@ -70,3 +70,7 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 
 2. `.env` 配置 `WEIXIN_AUTOLOGIN`, 设置是否开启微信内嵌浏览器跳转功能
 
+
+### openid 存储位置
+
+`users stream` 增加 `openid` 用于存储 **wechat** 的 `openid`
