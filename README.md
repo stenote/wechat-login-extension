@@ -73,4 +73,4 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 
 ### openid 存储位置
 
-`users stream` 增加 `openid` 用于存储 **wechat** 的 `openid`
+`users stream` 增加 `weixin_openid` 用于存储 **wechat** 的 `openid`
