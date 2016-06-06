@@ -8,10 +8,12 @@ use Illuminate\Config\Repository as ConfigRepository;
 class WechatLoginPlugin extends Plugin
 {
     protected $config;
+    protected $url;
 
-    public function __construct(ConfigRepository $config)
+    public function __construct(ConfigRepository $config, UrlGenerator $url)
     {
         $this->config = $config;
+        $this->url = $url;
     }
 
     public function getFunctions()
@@ -33,7 +35,7 @@ class WechatLoginPlugin extends Plugin
                 </script>', [
                     '%container_id' => $container_id,
                     '%appid' => $this->config->get('services.weixinweb.client_id'),
-                    '%redirect_uri' => $this->config->get('services.weixinweb.redirect'),
+                    '%redirect_uri' => $this->url->to('wechat/login'),
                 ]);
             }),
         ];

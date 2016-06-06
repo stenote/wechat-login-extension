@@ -35,7 +35,6 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 | :---- | ---- |
 | `WEIXINWEB_KEY` | **微信开放平台** 中的网页应用的 `app_id` |
 | `WEIXINWEB_SECRET` | **微信开放平台** 中的网页应用的 `app_id` |
-| `WEIXINWEB_REDIRECT_URI` | 站点 url 加 `/wechat/callback`, 例如: `http://baidu.com/wechat/callback` |
 | `WEIXIN_AUTOLOGIN` | 配置微信内嵌浏览器访问是否直接跳转到登录页面 |
 
 
@@ -59,14 +58,14 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 
 1. `config/wechat.php` 增加如下配置
 
-	```	
-	<?php
+```php
+<?php
 
-	return [
-		'autologin'=> env('WEIXIN_AUTOLOGIN'),
-	];
+return [
+	'autologin'=> env('WEIXIN_AUTOLOGIN'),
+];
 
-	```
+```
 
 2. `.env` 配置 `WEIXIN_AUTOLOGIN`, 设置是否开启微信内嵌浏览器跳转功能
 
