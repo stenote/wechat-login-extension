@@ -11,13 +11,6 @@ use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
 class WechatLoginSeeder extends Seeder
 {
     /**
-     * The type repository.
-     *
-     * @var TypeRepositoryInterface
-     */
-    protected $types;
-
-    /**
      * The field repository.
      *
      * @var FieldRepositoryInterface
@@ -41,18 +34,15 @@ class WechatLoginSeeder extends Seeder
     /**
      * Create a new TypeSeeder instance.
      *
-     * @param TypeRepositoryInterface       $types
      * @param FieldRepositoryInterface      $fields
      * @param StreamRepositoryInterface     $streams
      * @param AssignmentRepositoryInterface $assignments
      */
     public function __construct(
-        TypeRepositoryInterface $types,
         FieldRepositoryInterface $fields,
         StreamRepositoryInterface $streams,
         AssignmentRepositoryInterface $assignments
     ) {
-        $this->types = $types;
         $this->fields = $fields;
         $this->streams = $streams;
         $this->assignments = $assignments;
