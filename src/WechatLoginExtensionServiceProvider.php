@@ -16,7 +16,7 @@ class WechatLoginExtensionServiceProvider extends AddonServiceProvider
     ];
 
     protected $middleware = [
-        'Deepdevelop\WechatLoginExtension\Http\Middleware\Authorize',
+        'Deepdevelop\WechatLoginExtension\Http\Middleware\WechatLogin',
     ];
 
     protected $listeners = [

@@ -15,7 +15,7 @@ use Jenssegers\Agent\Agent;
  * @author        Deepdevelop, Inc. <hello@deepdevelop.com>
  * @author        Rui Ma <xjmarui@gmail.com.com>
  */
-class Authorize
+class WechatLogin
 {
     /**
      * The redirect utility.
@@ -50,7 +50,7 @@ class Authorize
         //不是请求 weixin/login
 
         if (
-            config('wechat.autologin')
+            config('services.weixinweb.autologin')
             &&
             !$request->session()->has('wechat_requested')
             &&
