@@ -56,7 +56,7 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 
 目前配置了微信内嵌浏览器访问页面后不会跳转, 可通过配置文件手动开启.
 
-1. `config/wechat.php` 增加如下配置
+*  `config/wechat.php` 增加如下配置
 
 ```php
 <?php
@@ -67,8 +67,16 @@ return [
 
 ```
 
-2. `.env` 配置 `WEIXIN_AUTOLOGIN`, 设置是否开启微信内嵌浏览器跳转功能
+* `.env` 配置 `WEIXIN_AUTOLOGIN`, 设置是否开启微信内嵌浏览器跳转功能
+* `config/services.php` 增加如下配置
 
+```
+    'weixinweb'=> [
+        'client_id' => env('WEIXINWEB_KEY'),
+        'client_secret' => env('WEIXINWEB_SECRET'),
+    ],
+
+```
 
 ### openid 存储位置
 
