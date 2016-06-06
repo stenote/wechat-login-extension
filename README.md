@@ -35,7 +35,7 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
 | :---- | ---- |
 | `WEIXINWEB_KEY` | **微信开放平台** 中的网页应用的 `app_id` |
 | `WEIXINWEB_SECRET` | **微信开放平台** 中的网页应用的 `app_id` |
-| `WEIXIN_AUTOLOGIN` | 配置微信内嵌浏览器访问是否直接跳转到登录页面 |
+| `WEIXIN_AUTO_LOGIN` | 配置微信内嵌浏览器访问是否直接跳转到登录页面 |
 
 
 **注意**, **微信开发平台** 地址为: [https://open.weixin.qq.com/](https://open.weixin.qq.com/)
@@ -64,7 +64,7 @@ composer require "deepdevelop/wechat_login-extension:~0.1"
     'weixinweb'=> [
         'client_id' => env('WEIXINWEB_KEY'),
         'client_secret' => env('WEIXINWEB_SECRET'),
-        'autologin' => env('WEIXIN_AUTO_LOGIN'),
+        'auto_login' => env('WEIXIN_AUTO_LOGIN'),
     ],
 
 ```

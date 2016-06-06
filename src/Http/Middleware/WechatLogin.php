@@ -50,7 +50,7 @@ class WechatLogin
         //不是请求 weixin/login
 
         if (
-            config('services.weixinweb.autologin')
+            config('services.weixinweb.auto_login')
             &&
             !$request->session()->has('wechat_requested')
             &&
