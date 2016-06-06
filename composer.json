@@ -22,5 +22,6 @@
             "homepage": "http://stenote.com",
             "role": "Developer"
         }
-    ]
+    ],
+    "version": "0.1.6"
 }
