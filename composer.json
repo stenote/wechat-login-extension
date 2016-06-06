@@ -14,5 +14,13 @@
     },
     "description": "wechat login extension for pyrocms",
     "keywords": ["wechat", "extension", "pyrocms"],
-    "license": "MIT"
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rui Ma",
+            "email": "xjmarui@gmail.com",
+            "homepage": "http://stenote.com",
+            "role": "Developer"
+        }
+    ]
 }
