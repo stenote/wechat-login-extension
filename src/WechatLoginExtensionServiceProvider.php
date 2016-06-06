@@ -1,4 +1,6 @@
-<?php namespace Deepdevelop\WechatLoginExtension;
+<?php
+
+namespace Deepdevelop\WechatLoginExtension;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 
@@ -44,5 +46,4 @@ class WechatLoginExtensionServiceProvider extends AddonServiceProvider
     public function map()
     {
     }
-
 }

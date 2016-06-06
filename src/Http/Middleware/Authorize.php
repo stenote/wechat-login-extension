@@ -1,4 +1,6 @@
-<?php namespace Deepdevelop\WechatLoginExtension\Http\Middleware;
+<?php
+
+namespace Deepdevelop\WechatLoginExtension\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -6,16 +8,15 @@ use Illuminate\Routing\Redirector;
 use Jenssegers\Agent\Agent;
 
 /**
- * Class WeixinAuthorize
+ * Class WeixinAuthorize.
  *
  * @link          http://www.deepdevelop.com/
+ *
  * @author        Deepdevelop, Inc. <hello@deepdevelop.com>
  * @author        Rui Ma <xjmarui@gmail.com.com>
- * @package       Deepdevelop\UsersExtension\Http\Middle
  */
 class Authorize
 {
-
     /**
      * The redirect utility.
      *
@@ -30,14 +31,15 @@ class Authorize
      */
     public function __construct(Redirector $redirect)
     {
-        $this->redirect   = $redirect;
+        $this->redirect = $redirect;
     }
 
     /**
      * Check the authorization of module access.
      *
-     * @param  Request  $request
-     * @param  \Closure $next
+     * @param Request  $request
+     * @param \Closure $next
+     *
      * @return \Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
@@ -50,7 +52,7 @@ class Authorize
         if (
             config('wechat.autologin')
             &&
-            ! $request->session()->has('wechat_requested')
+            !$request->session()->has('wechat_requested')
             &&
             strpos($agent->getUserAgent(), 'MicroMessenger') !== false
             &&

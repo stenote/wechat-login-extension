@@ -1,4 +1,6 @@
-<?php namespace Deepdevelop\WechatLoginExtension;
+<?php
+
+namespace Deepdevelop\WechatLoginExtension;
 
 use Anomaly\Streams\Platform\Assignment\Contract\AssignmentRepositoryInterface;
 use Anomaly\Streams\Platform\Database\Seeder\Seeder;
@@ -8,7 +10,6 @@ use Anomaly\Streams\Platform\Stream\Contract\StreamRepositoryInterface;
 
 class WechatLoginSeeder extends Seeder
 {
-
     /**
      * The type repository.
      *
@@ -51,9 +52,9 @@ class WechatLoginSeeder extends Seeder
         StreamRepositoryInterface $streams,
         AssignmentRepositoryInterface $assignments
     ) {
-        $this->types       = $types;
-        $this->fields      = $fields;
-        $this->streams     = $streams;
+        $this->types = $types;
+        $this->fields = $fields;
+        $this->streams = $streams;
         $this->assignments = $assignments;
     }
 
@@ -62,23 +63,22 @@ class WechatLoginSeeder extends Seeder
      */
     public function run()
     {
+        $weixin_openid_field = $this->fields->create(
+            [
+                'namespace' => 'users',
+                'name' => 'weixin_openid',
+                'slug' => 'weixin_openid',
+                'type' => 'anomaly.field_type.text',
+            ]
+        );
 
-	    $weixin_openid_field = $this->fields->create(
-		    [
-			    'namespace' => 'users',
-			    'name' => 'weixin_openid',
-			    'slug' => 'weixin_openid',
-			    'type'  => 'anomaly.field_type.text',
-		    ]
-	    );
+        $stream = $this->streams->findBySlugAndNamespace('users', 'users');
 
-	    $stream = $this->streams->findBySlugAndNamespace('users', 'users');
-
-	    $this->assignments->create(
-		    [
-			    'stream'=> $stream,
-			    'field'=> $weixin_openid_field,
-		    ]
-	    );
+        $this->assignments->create(
+            [
+                'stream' => $stream,
+                'field' => $weixin_openid_field,
+            ]
+        );
     }
 }

@@ -1,8 +1,8 @@
-<?php  namespace Deepdevelop\WechatLoginExtension;
+<?php
 
+namespace Deepdevelop\WechatLoginExtension;
 
 use Anomaly\Streams\Platform\Database\Seeder\Seeder;
-use Deepdevelop\WechatLoginExtension\WechatLoginSeeder;
 
 class WechatLoginExtensionSeeder extends Seeder
 {

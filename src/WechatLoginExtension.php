@@ -1,10 +1,11 @@
-<?php namespace Deepdevelop\WechatLoginExtension;
+<?php
+
+namespace Deepdevelop\WechatLoginExtension;
 
 use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 class WechatLoginExtension extends Extension
 {
-
     /**
      * This extension provides...
      *
@@ -17,5 +18,4 @@ class WechatLoginExtension extends Extension
      * @var null|string
      */
     protected $provides = null;
-
 }
